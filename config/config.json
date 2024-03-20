@@ -1,0 +1,8 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "database": "codeconnect",
+    "password": "",
+    "port":"3306"
+}
+
