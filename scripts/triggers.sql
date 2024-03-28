@@ -1,0 +1,1 @@
+-- In this file, we will define the triggers of the database

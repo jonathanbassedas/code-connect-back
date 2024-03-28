@@ -1,15 +1,16 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
 # Compiled output
 /dist
 /tmp
 /out-tsc
 /bazel-out
 
-# Node
+# Dependencies
 /node_modules
 npm-debug.log
 yarn-error.log
+.pnp
+.pnp.js
+/out-stc
 
 # IDEs and editors
 .idea/
@@ -36,7 +37,26 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+.DS_Store
+*.pem
 
 # System files
 .DS_Store
 Thumbs.db
+
+# Production
+/buid
+
+# Debug
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+.env
+
+# Prisma
+migrations
