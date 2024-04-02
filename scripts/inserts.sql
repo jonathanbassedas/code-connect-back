@@ -1,5 +1,5 @@
 -- In this file, we will insert the development data
-use codeconnect;
+use codeconnect_db;
 
 INSERT INTO
   codigo (title)

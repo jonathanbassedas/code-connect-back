@@ -1,11 +1,11 @@
 -- In this file, we will create the database schema
-DROP DATABASE IF EXISTS codeconnect;
+DROP DATABASE IF EXISTS codeconnect_db;
 
-CREATE DATABASE IF NOT EXISTS codeconnect DEFAULT CHARACTER
+CREATE DATABASE IF NOT EXISTS codeconnect_db DEFAULT CHARACTER
 SET
   utf8 COLLATE utf8_general_ci;
 
-USE codeconnect;
+USE codeconnect_db;
 
 SET
   GLOBAL log_bin_trust_function_creators = 1;
