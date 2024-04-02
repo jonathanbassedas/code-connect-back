@@ -1,4 +1,4 @@
-name: CI/CD_PUSH_MAIN
+name: CI/CD_PUSH_MAIN_RELEASE
 
 on:
   push:
