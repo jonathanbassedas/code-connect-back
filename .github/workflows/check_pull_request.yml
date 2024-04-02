@@ -1,0 +1,19 @@
+name: CI/CD_PR
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+permissions: read-all
+
+jobs:
+  semantic_pull_request:
+    runs-on: ubuntu-latest
+    name: Conventional Pull Request
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          validateSingleCommit: false

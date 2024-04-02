@@ -31,8 +31,9 @@
     "refresh:db": "docker compose down && docker volume rm --force code-connect-back_data && docker compose up -d",
     "stop:db": "docker compose down",
     "test": "jest --coverage --detectOpenHandles --passWithNoTests",
-    "lint": "eslint \"src/**/*.ts\" --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"{src,test}/**/*.ts\" --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "check:code": "pnpm run lint && pnpm run format",
     "prepare": "husky install"
   },
   "dependencies": {

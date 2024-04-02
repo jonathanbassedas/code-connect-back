@@ -7,9 +7,9 @@ const config = {
         releaseRules: [
           { type: 'feat', release: 'minor' },
           { type: 'fix', release: 'patch' },
-          { type: 'ci', release: 'patch' },
-          { type: 'chore', release: 'patch' },
-          { type: 'docs', release: 'patch' },
+          { type: 'ci', release: 'minor' },
+          { type: 'chore', release: 'minor' },
+          { type: 'docs', release: 'minor' },
         ],
       },
     ],
@@ -21,17 +21,14 @@ const config = {
         changelogTitle: '# Changelog\n\n## Code connect back\n\n',
       },
     ],
-    '@semantic-release/npm',
     [
-      '@semantic-release/git',
-      {
-        assets: ['package.json', 'dist/**/*.{js,js.map}', 'CHANGELOG.md'],
-        // eslint-disable-next-line no-undef
-        message: `chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}`,
-      },
+      "@semantic-release/git", {
+        "assets": ["dist/**/*.js", "dist/*.js.map", "package.json", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
     ],
     '@semantic-release/github',
   ],
 };
 
-export default config;
+module.exports = config;
