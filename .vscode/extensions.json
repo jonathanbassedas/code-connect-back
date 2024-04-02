@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "orta.vscode-jest",
+    "usernamehw.errorlens",
+    "ms-azuretools.vscode-docker",
+    "christian-kohler.path-intellisense",
+    "inferrinizzard.prettier-sql-vscode",
+    "rapidapi.vscode-services",
+    "rapidapi.vscode-rapidapi-client",
+    "jasonnutter.vscode-codeowners",
+  ],
+}

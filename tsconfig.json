@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "target": "ESNext",
+    "types": [
+      "node",
+      "jest",
+      "./types/index.d.ts"
+    ],
+    "outDir": "./dist",
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "types/*",
+    "test/**/*",
+  ],
+  "ts-node": {
+    "swc": true
+  }
+}

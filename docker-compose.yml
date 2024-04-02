@@ -1,0 +1,23 @@
+services:
+  mysql:
+    image: mysql:8.0-oracle
+    container_name: dev-codeconnect
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    environment:
+      MYSQL_DATABASE: codeconnect_db
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_TCP_PORT: 3030
+    volumes:
+      - data:/var/lib/mysql
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./scripts/triggers.sql:/docker-entrypoint-initdb.d/2.sql
+      - ./scripts/functions.sql:/docker-entrypoint-initdb.d/3.sql
+      - ./scripts/inserts.sql:/docker-entrypoint-initdb.d/4.sql
+    ports:
+      - '3030:3030'
+
+volumes:
+  data:

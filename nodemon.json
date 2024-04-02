@@ -1,0 +1,7 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ext": "ts,json",
+  "exec": "pnpm run build && pnpm run start"
+}

@@ -1,0 +1,22 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.json, tsconfig.build.json, .swcrc",
+    ".eslintrc.cjs": ".eslintrc.js, .eslintignore, .prettierrc, .prettierignore, .editorconfig",
+    "package.json": "package.json, pnpm-lock.yaml, nodemon.json",
+    ".gitignore": ".gitignore, .gitattributes",
+    "README.md": "README.md, LICENSE, CONTRIBUTING.md, CHANGELOG.md",
+    "release.config.js": "release.config.js, commitlint.config.js, .commitlintrc.json"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+  },
+  "editor.formatOnSave": true,
+  "editorconfig.generateAuto": false,
+  "editorconfig.template": "default",
+  "jest.runMode": "on-demand",
+  "jest.jestCommandLine": "pnpm run test",
+  "[codeowners]": {
+    "editor.defaultFormatter": "jasonnutter.vscode-codeowners"
+  }
+}
