@@ -1,4 +1,4 @@
-name: CI/CD_PUSH_MAIN
+name: CI/CD_PUSH_MAIN_RELEASE
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: [20.6.1]
+        node_version: [20.8.1]
       fail-fast: false
 
     steps:
