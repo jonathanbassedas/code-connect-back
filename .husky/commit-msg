@@ -1,6 +1,20 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-if [ "$HUSKY_GIT_PARAMS" != "refs/heads/main" ]; then
-  npx commitlint --edit $1
+if [ ! -f $1 ]; then
+  echo "Commit message file not found"
+  exit 1
 fi
+
+if ! read -r COMMIT_MSG < $1; then
+  echo "Failed to read commit message"
+  exit 1
+fi
+
+if [[ $COMMIT_MSG == "chore(release):"* ]]; then
+  echo "Release commit, skipping linting..."
+  exit 0
+fi
+
+npx commitlint --edit $1
+echo "Commit message linted"
