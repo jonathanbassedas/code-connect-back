@@ -11,10 +11,13 @@ if ! read -r COMMIT_MSG < $1; then
   exit 1
 fi
 
-if [[ $COMMIT_MSG == "chore(release):"* ]]; then
-  echo "Release commit, skipping linting..."
-  exit 0
-fi
+case "$COMMIT_MSG" in
+  "chore(release):"*)
+    echo "Release commit, skipping linting..."
+    exit 0
+    ;;
+esac
 
 npx commitlint --edit $1
 echo "Commit message linted"
+
