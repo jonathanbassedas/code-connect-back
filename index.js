@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const codigosRoutes = require('./routes/codigos');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 
 
 app.use('/api/codigos' , codigosRoutes);
+app.use('/api/auth' , authRoutes);
 
 
 const server = app.listen(ports, () => console.log(`Listening in port ${ports}`));
